@@ -21,12 +21,12 @@ namespace ClientCore.Fire
             if (!IsOwner)
                 return;
 
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.Mouse0))
             {
                 force += 1;
             }
 
-            if (Input.GetKeyUp(KeyCode.Q))
+            if (Input.GetKeyUp(KeyCode.Mouse0))
             {
                 FireServerRpc(OwnerClientId, force);
                 force = 10;
